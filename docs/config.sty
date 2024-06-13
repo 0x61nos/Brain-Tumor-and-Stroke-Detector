@@ -1,0 +1,135 @@
+% Thesis template - originally created by Matthew Townson and Andrew Reeves, 2016
+% This version revised and organized by Carl Li, 2024
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages for use in the thesis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc} % Allows the use of UTF-8 encoded characters
+\usepackage[T1]{fontenc} % Ensures proper encoding for special characters
+\usepackage{lmodern} % Uses the Latin Modern font, an enhanced version of the Computer Modern font
+\usepackage{geometry} % Sets the page layout
+\usepackage{url} % Formats URLs
+\usepackage{titlesec} % Allows customization of section titles
+\usepackage{graphicx} % Allows inclusion of images
+\usepackage{hyperref} % Adds hyperlinks
+\usepackage{rotating} % Provides commands for rotated objects
+\usepackage{pdflscape} % Allows landscape pages
+\usepackage{mathrsfs,amsmath} % For advanced mathematical symbols and environments
+\usepackage{siunitx} % Provides tools for SI units formatting
+\usepackage{acronym} % Manages acronyms
+\usepackage{booktabs} % Enhances the quality of tables
+\usepackage[UKenglish]{babel} % Sets the document language to UK English
+\usepackage{bibentry} % Allows full bibliographic entries in the text
+\usepackage{subcaption} % Adds support for sub-captions
+\usepackage{natbib} % For author-year citation styles
+\usepackage{tikz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom caption setup for subfigures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\captionsetup[subfigure]{labelformat=simple}
+\renewcommand\thesubfigure{\alph{subfigure})}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paragraph formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{12pt} % No indentation for paragraphs
+\nonzeroparskip % Adds a small skip between paragraphs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom float for subfigures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsubfloat{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendix settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand*{\cftappendixname}{Appendix\space}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapterstyle{madsen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{
+  a4paper, % Paper size
+  width=130mm, % Text width
+  top=35mm, % Top margin
+  bottom=35mm, % Bottom margin
+  bindingoffset=10mm % Binding offset
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Line spacing settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \SingleSpacing
+\OnehalfSpacing % One and a half line spacing
+% \DoubleSpacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section numbering depth
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setsecnumdepth{subsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nobibliography*
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}}
+\usepackage{perpage}
+\MakePerPage{footnote} % Resets footnote numbering on each page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page style settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makepagestyle{myruled}
+\makeheadrule {myruled}{\textwidth}{\normalrulethickness}
+\makefootrule {myruled}{\textwidth}{\normalrulethickness}{\footruleskip}
+\makeevenhead {myruled}{}{\small\itshape\leftmark}{}
+\makeoddhead {myruled}{}{\small\itshape\rightmark}{}
+\makeevenfoot {myruled}{\small \thepage}{}{}
+\makeoddfoot {myruled}{}{}{\small \thepage}
+
+\makepsmarks {myruled}{
+  \nouppercaseheads
+  \createmark {chapter} {both} {shownumber}{}{. \ }
+  \createmark {section} {both}{shownumber}{} {. \ }
+  \createmark {subsection} {both}{shownumber}{} {. \ }
+  \createmark {subsubsection}{both}{shownumber}{} {. \ }
+  \createplainmark {toc} {both} {\contentsname}
+  \createplainmark {lof} {both} {\listfigurename}
+  \createplainmark {lot} {both} {\listtablename}
+  \createplainmark {bib} {both} {\bibname}
+  \createplainmark {index} {both} {\indexname}
+  \createplainmark {glossary} {both} {\glossaryname}
+}
+
+\makepagestyle{plain}
+\makefootrule {plain}{\textwidth}{\normalrulethickness}{\footruleskip}
+\makeevenfoot {plain}{\small \thepage}{}{}
+\makeoddfoot {plain}{}{}{\small \thepage}
+
+\makepsmarks {plain}{
+  \nouppercaseheads
+  \createmark {chapter} {both} {shownumber}{}{. \ }
+  \createmark {section} {both}{shownumber}{} {. \ }
+  \createmark {subsection} {both}{shownumber}{} {. \ }
+  \createmark {subsubsection}{both}{shownumber}{} {. \ }
+  \createplainmark {toc} {both} {\contentsname}
+  \createplainmark {lof} {both} {\listfigurename}
+  \createplainmark {lot} {both} {\listtablename}
+  \createplainmark {bib} {both} {\bibname}
+  \createplainmark {index} {both} {\indexname}
+  \createplainmark {glossary} {both} {\glossaryname}
+}
+
+% Ensure subsubsections are numbered
+\setsecnumdepth{subsubsection}
+% Use the 'myruled' page style
+\pagestyle{myruled}

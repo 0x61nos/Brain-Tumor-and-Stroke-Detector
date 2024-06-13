@@ -1,0 +1,27 @@
+% !TEX root = ../../thesis.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Front matter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{roman}           % roman page numbing (invisible for empty page style)
+\pagestyle{empty}               % no header or footers
+\input{Content/Other_pages/cover/title_page}      % INCLUDE: all titlepages
+\cleardoublepage
+
+\pagestyle{plain}               % display just page numbers
+\input{Content/Chapters/abstract}        % INCLUDE: the abstracts (english and german)
+\cleardoublepage
+%
+\cleardoublepage
+%
+\setcounter{tocdepth}{3}        % define depth of toc
+\tableofcontents*                % display table of Contents
+\cleardoublepage
+%
+\listoffigures
+\cleardoublepage
+%
+% \listoftables
+% \cleardoublepage
+%
+\input{Content/Chapters/acronyms}
+\cleardoublepage

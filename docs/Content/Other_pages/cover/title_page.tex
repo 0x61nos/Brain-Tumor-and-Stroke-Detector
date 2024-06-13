@@ -1,0 +1,89 @@
+% !TEX root = ../../thesis.tex
+
+% \documentclass[12pt]{article}
+% \usepackage{graphicx}
+% \usepackage{titling}
+% \usepackage{xcolor}
+% 
+% \usepackage{geometry}
+
+% Define colors
+\definecolor{primaryColor}{HTML}{280091}
+\definecolor{secondaryColor}{HTML}{4C5CC5}
+\definecolor{accentColor}{HTML}{00B299}
+\definecolor{lightAccentColor}{HTML}{3FCFD5}
+\definecolor{backgroundGray}{HTML}{f0f0f0}
+
+\begin{titlingpage}
+    \thispagestyle{empty}
+    
+    % Background Design
+    \begin{tikzpicture}[remember picture, overlay]
+        % Top right corner design
+        \node [anchor=north east, inner sep=0pt] at (current page.north east)%
+            {\includegraphics[height=6cm]{Content/Other_pages/cover/img/topRightCorner.pdf}};
+        % Bottom left corner design
+        \node [anchor=south west, inner sep=0pt] at (current page.south west)%
+            {\includegraphics[height=6cm]{Content/Other_pages/cover/img/bottomLeftCorner.pdf}};
+        % University logo at the bottom right
+        \node (uni_logo) [anchor=south east, inner sep=0pt, xshift=-10mm, yshift=10mm] at (current page.south east)%
+            {\includegraphics[height=2cm]{Img/Logo/uni_logo.png}};
+        \node (uni_logo) [anchor=south east, inner sep=0pt, xshift=-35mm, yshift=8.3mm] at (current page.south east)%
+            {\includegraphics[height=2.4cm]{Img/Logo/bani_souwaif_uni_logo.png}};
+    \end{tikzpicture}
+
+    \begin{center}
+        \vspace*{2cm}
+
+        % Title
+        {\color{primaryColor} \Huge \textbf{\thesisTitle}}
+
+        \vspace{0.5cm}
+        % Subtitle (if any)
+        % {\color{secondaryColor} \Large \textit{\thesisSubtitle}}
+
+        \vspace{2cm}
+
+        % Authors
+        {\color{accentColor} \Large
+        \begin{minipage}{0.7\textwidth}
+            \centering
+            Abdallah Shehata --- \emph{Anas Elgarhy} \\
+            Yasmine Osama --- Youmna Mustafa \\
+            Khloud Tareq --- Beshoy Nashat \\
+            Abeer Yousief --- Asmaa Samir
+        \end{minipage}
+        }
+
+        \vfill
+
+        % University Logo (Already included in tikz)
+        
+        \vspace{0.5cm}
+
+        % Supervisors
+        {\color{secondaryColor} \normalsize
+        \begin{minipage}{0.8\textwidth}
+            \centering
+            Supervisors: \thesisFirstSupervisor \& \thesisSecondSupervisor
+        \end{minipage}
+        }
+
+        \vspace{0.5cm}
+
+        % University and Department
+        {\color{secondaryColor}
+        \begin{minipage}{0.7\textwidth}
+            \centering
+            \thesisUniversityDepartment \\
+            \thesisUniversity
+        \end{minipage}
+        }
+
+        \vspace{1cm}
+
+        % Date
+        {\color{primaryColor} \thesisDate}
+
+    \end{center}
+\end{titlingpage}

@@ -1,0 +1,142 @@
+%!TEX root = ../../thesis.tex
+\chapter{System Requirements Specifications}
+\section{Introduction and Purpose}
+
+ The documents to be searched, as well as the software needed to search, are all listed in this document. To create the system, a list of the different software frameworks is necessary. The following topics are covered in the document.
+ Introduction and Purpose
+\section{Work Scope}
+ Today's ailments are on the rise as a result of our hectic and stressful lifestyles. All age groups are susceptible to illness, thus early detection is critical. Pneumonia, lung cancer, and brain tumor diseases by using symptoms or reports. Most people throughout the world still lack access to the necessary instruments for the early identification of these illnesses. One of the most hazardous diseases among both genders, early diagnosis and treatment are critical to the health of those sick. For the future, we're going to invent a strong system that can accurately work on a large medical dataset with several lung cancer and brain tumor diseases.
+ 
+\section{User Classes and Characteristics}
+
+This system contains mainly 2 classes the User and the Admin, the characteristics of these classes can be listed as follows:
+
+\begin{enumerate}[a)]
+    \item Characteristics of User
+    \begin{enumerate}[i)]
+        \item Login/Register
+        \item Upload images
+        \item Get prediction results
+        \item Logout
+        \end{enumerate}
+        \item Characteristics of Admin
+            \begin{enumerate}[i)]
+            \item Admin login with authentication
+            \item Stage evaluation
+            \item Prediction result
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Assumptions and Dependencies}
+\subsubsection{Assumptions}
+  Pathological tests, such as needle biopsy specimens and analysis by experienced pathologists, are necessary for the accurate identification and classification of skin diseases because they require a human judgment of many factors, and experiences, and a system of decision support is eligible in this case. Doctors are unable to use the current system since it lacks a diagnostic system \cite{ABDELMAKSOUD201571-51}.
+  Dependencies: Both structured data and unstructured data are used by the algorithm (from hospitals). To the best of our knowledge, there is an absence of studies on any data type in the field of big data analytics for medicine. Providing a correct diagnosis lowers the mortality rate caused by misdiagnosis.
+
+\section{Functional Requirements}
+\subsection{First feature of The System (Functional Requirement)}
+
+\begin{enumerate}[a)]
+    \item Images of lung cancer can be used to identify the condition.
+    \item Image-based detection of brain tumors.
+\end{enumerate}
+
+
+\subsection{System Feature (Functional Requirement)}
+
+\begin{enumerate}
+    \item Database
+    \item Database Requirements SQLite3
+\end{enumerate}
+
+\section{Connectivity to the Outside World Requirements}
+\subsection{ User Interfaces}
+
+Python: The Python interface is currently being worked on. Many algorithms, as well as the functions that make them up or support them, may be found. With an STL container-friendly template interface, Open CV is developed entirely in C++.
+
+Image Processing: Images may be read and written. Images and their characteristics are detected. In a picture, the detection of forms like circles, rectangles, and coins may be accomplished. Recognizing text in photographs is an emerging technology (e.g., taking a look at the plates). Changing the color and resolution of the picture.
+
+\subsection{Hardware Interfaces}
+
+\begin{enumerate}
+    \item To operate our project, we needed a hardware system such as an Intel I3 CPU with 4 GB of RAM and a 20GB hard drive.
+    \item Standard keyboard, mouse, and LED monitor are also required
+\end{enumerate}
+
+\subsection{Software Interfaces}
+
+Microsoft can be used as the operating system platform for the system. Some GUI tools are also employed by the system. PyCharm and higher are required as a Python platform to execute this application. An SQLite3 database is required for data storage.
+
+\subsection{Communication Interfaces}
+
+\begin{enumerate}[a)]
+    \item Diseases Detection System
+    \item User disease image data set
+    \item Pre-processing unit
+    \item Feature vector generation using CNN
+    \item Classified results in the form of predictions
+    \item Open-CV for image processing
+\end{enumerate}
+
+\section{Non-functional Requirements}
+\subsection{ Performance Requirements}
+
+\begin{enumerate}
+    \item Performance: The performance of our system is fast as compared to other systems and response time is quick.
+    \item Availability: Availability of data is also a requirement for performing any operations.
+    \item Maintainability: In this system, we can maintain data of the user’s images.
+    \item Security: In this system, user information is stored in the form of images, so our system is secure.
+    \item Usability: This system is very useful as an assistive tool for the medical sector.
+\end{enumerate}
+
+\subsection{Safety Requirements}
+
+This study is carried out to examine the economic impact that the system is going to have on the organization. The funding available to the company for system research and development is limited. Costs must be for clear reasons. As a result, the system was developed within the budget, which was accomplished because almost all the technologies used were free.
+
+\subsection{Security Requirements}
+
+The main thing in our system is, that we must provide end-to-end security for user and provider signs by using proper authentication login credentials. Users have been given the right to upload images and only view the results. The system is fully secure as well as eco-friendly. We implemented this system by considering security aspects, so we divided our system into four different modules to achieve integrity.
+
+\subsection{Software Quality Attributes}
+
+\begin{enumerate}
+    \item Capacity: The project capacity according to data is very small.
+    \item Availability: The proposed system is available on Python application.
+    \item Reliability: System is reliable for multi-disease prediction.
+    \item Security: When users log in to the system the user's mail ID and Password accurately match.
+\end{enumerate}
+
+
+\section{System Requirements}
+\subsection{Requirements of Database }
+\subsection{ Software Requirements (Platform Choice)}
+The requirements for the software (platform choice) can be summarized as follows:
+
+\begin{enumerate}
+    \item Operating System: Linux
+    \item Front End: Python3x
+    \item Database: SQLite3
+    \item IDE: PyCharm
+\end{enumerate}
+
+\subsection{Hardware Requirements}
+
+The requirements for the hardware can be summarized as follows:
+
+\begin{enumerate}[a)]
+    \item Processor: x64
+    \item Speed: 2.5 GHz
+    \item RAM: 8 GB (min)
+    \item  Hard Disk: 20GB (min)
+\end{enumerate}
+
+\section{The SDLC Model}
+Waterfall Model: The waterfall model is a consecutive model that is used in the software development processes, where the process slowly descends to be phase of requirements, gathering, analyses, design of systems, implementation, testing, Deploying, and finally maintenance \cite{chen791-53}.
+
+\begin{enumerate}[a)]
+    \item Requirement analysis: Here requirements are gathered means which kind of dataset is required. Then what are the functional requirements of the system? The document is prepared, and then use cases are designed. In our system, we gather all information about the Admin and user and the functionality of each module.
+    \item System Design: at this stage, the hardware (HW) and software (SW) required to design A system is decided. It uses the above-mentioned hardware and software requirements. We design the Admin and user modules. Design the according to the functionality of each module.
+    \item Implementation: In this stage, the system is developed module-wise. This system consists of mainly 2 modules (1. Admin 2. User).
+    \item Testing: In this stage, all developed software is installed, and it is tested in different ways against the system requirements. In this stage, we check whether all these modules are working properly or not with proper authentication. Disease prediction proper or not as well as stage prediction proper or not.
+    \item Deployment: in this deployment stage we deployed the new functionality of each module like Crop Yields Predictions, Crop Suggestion to the Farmer; Dynamic Assistance, and Online E-Mart modules. We deploy all systems with proper functions.
+    \item Maintenance: According to the software’s new version and their use, they need to be updated some predefined machine learning libraries need to be used. This system is easy to maintain.
+\end{enumerate}

@@ -1,0 +1,61 @@
+\documentclass[11pt, oneside]{memoir}
+\usepackage{config}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Details of your dissertation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\thesisTitle}{Automated Detection of Brain Tumor and Brain Stroke}
+\newcommand{\thesisSubtitle}{Thesis Subtitle}
+% \newcommand{\thesisName}{Abdallah Shehath}
+
+\newcommand{\thesisDate}{2024 - 2025}
+% \newcommand{\thesisDate}{\today}
+\newcommand{\thesisFirstSupervisor}{\textbf{Dr. Wafaa Samy}}
+\newcommand{\thesisSecondSupervisor}{\textbf{TA. Hussein Mohamed}}
+\newcommand{\thesisUniversity}{\protect{The Egyptian E-learning University}}
+\newcommand{\thesisUniversityDepartment}{Department of Information Technology}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title and Front Pages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\include{Content/Other_pages/front_matter} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main content starts here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\pagestyle{myruled} % Use the custom 'myruled' page style for the main content
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{Content/Chapters/chapter-01} % INCLUDE: Introduction
+\include{Content/Chapters/chapter-02} % INCLUDE: Research Questions
+\include{Content/Chapters/chapter-03} % INCLUDE: Aims and Objectives
+\include{Content/Chapters/chapter-04} % INCLUDE: Literature Review
+\include{Content/Chapters/chapter-05} % INCLUDE: Research Gap
+\include{Content/Chapters/chapter-06} % INCLUDE: Methodology
+\include{Content/Chapters/chapter-07} % INCLUDE: Initial Early Results
+% \include{Content/Chapters/chapter-08} % INCLUDE: Future work
+% \include{Content/Chapters/chapter-09} % INCLUDE: Schedule
+% \include{Content/Chapters/chapter-10} % INCLUDE: Dissemination
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\bibliography{refs} % INCLUDE: Bibliography file
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{appendices}
+% \include{Content/Chapters/appendix} % INCLUDE: Appendices
+% \end{appendices}
+
+\end{document}
