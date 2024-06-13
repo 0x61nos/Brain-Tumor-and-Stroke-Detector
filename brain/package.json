@@ -1,0 +1,45 @@
+{
+  "name": "brain",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
+    "core-js": "^3.8.3",
+    "jquery": "^3.6.1",
+    "js-cookie": "^2.2.1",
+    "normalize.css": "^8.0.1",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.4.24",
+    "swiper": "^10.1.0",
+    "vue": "^3.2.13",
+    "vue-axios": "^3.5.2",
+    "vue-owl-carousel": "^2.0.3",
+    "vue-router": "^4.0.3",
+    "vuelidate": "^0.7.7",
+    "vuex": "^4.1.0",
+    "vuex-persistedstate": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^14.1.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
