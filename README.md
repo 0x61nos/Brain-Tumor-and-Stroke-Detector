@@ -1,5 +1,8 @@
 # Brain Tumor and Stroke Detector
 
+[![Presentation](https://img.shields.io/badge/presentation-google_drive-8A2BE2)](https://drive.google.com/file/d/14Woz6NTmtFLAzzO4S9DWv7gfcwJtYHN-/view)
+[![docs](https://img.shields.io/badge/docs-the_project_documentation-8A2BE2)](./docs/Graduation_Project_Documentation.pdf)
+
 ## Abstract
 
 A brain tumor is a growth of cells in the brain or near it. Brain tumors can occur in the brain tissue or nearby locations, including nerves, the pituitary gland, the pineal gland, and the membranes that cover the surface of the brain. The rigidity of the skull means any growth can cause significant problems. Brain tumors can be either cancerous (malignant) or non-cancerous (benign).
